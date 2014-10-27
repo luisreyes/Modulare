@@ -1,0 +1,203 @@
+
+.mobile-menu{
+  background:$navigation-background;
+  text-transform: $navigation-text-transform;
+  font-family: $navigation-font-family;
+  color:$navigation-item-color;
+  height:$mobile-menu-height;
+
+  i{
+    font-size: 25px;
+    padding: 10px;
+    color: $navigation-item-color;
+    cursor: pointer;
+
+    &:hover,
+    &:active,
+    &:focus,
+    &.active{
+      color:$accent-color;
+    }
+  }
+}
+
+/* Normal/Common Screen Specific Styles - Desktop */
+nav{
+
+  background:$navigation-background;
+  text-transform: $navigation-text-transform;
+  font-family: $navigation-font-family;
+
+  //Global Navigation Styles
+  a{
+    &:link{
+      color:$navigation-item-color;
+      text-decoration: none;
+      display: block;
+    }
+    
+    &:visited{
+      color:$navigation-item-color;
+      font-style: italic;
+      text-decoration: none;
+    }
+    
+    &:hover,
+    &:active{
+      color:$navigation-item-color-hover;
+      text-decoration: none;
+    }
+
+    
+  }
+
+  ul{
+    display: inline;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    z-index:10;
+
+    li{
+      transition: background-color 100ms;
+      background:$navigation-item-background;
+      font-size: $navigation-item-font-size;
+      line-height: $navigation-item-font-size;
+
+      &:hover{
+        background: $navigation-item-background-hover;     
+      }
+
+      a{
+
+        &:link,
+        &:visited{ 
+          color: $navigation-item-color;
+          padding: $navigation-item-padding;
+        }
+
+        &:hover,
+        &:active{          
+          color:$navigation-item-color-hover;
+        }
+      }
+
+      ul{
+
+        li{
+          &:hover{ 
+            background: $navigation-sub-item-background-hover;
+            color: $navigation-sub-item-color-hover;
+            padding: $navigation-sub-item-hover-padding;
+          }
+
+          a{
+            color: $navigation-sub-item-color;
+            padding: $navigation-sub-item-padding;
+            width: 100%;
+            
+            &:hover{
+              color:$navigation-sub-item-color-hover;
+            }
+
+            &:active{
+              color:$navigation-sub-item-color-active;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.navigation{
+  ul{
+
+    li {
+    
+      display: inline-block;
+      margin-right: -3px;
+      position: relative;
+      cursor: pointer;
+      
+      &:hover{
+        ul {
+          opacity: 1;
+          visibility: visible;
+        }        
+      }
+
+      ul {
+        padding: 0;
+        position: absolute;
+        left: 0;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 100ms;
+
+        li { 
+          background: $navigation-sub-item-background; 
+          color: $navigation-sub-item-color;
+          width: 100%;
+          white-space: nowrap;
+          transition: padding 100ms;
+
+          a{
+            color: $navigation-sub-item-color;
+            padding: $navigation-sub-item-padding;
+            font-size: $navigation-sub-item-font-size;
+            line-height: $navigation-sub-item-font-size;
+            width: 100%;
+
+            &:hover,
+            &:active{
+              color:$navigation-sub-item-color-hover;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.mobile-navigation{
+  position: fixed;
+  top: #{$mobile-menu-height+2};
+  bottom: 0;
+  right:100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: #333;
+  width: 100%;
+  z-index:10;
+  transition: all 250ms, filter 250ms;
+
+  &>ul{
+    &>li{
+      border-bottom:1px solid $navigation-item-background-hover;
+      a{padding:15px; }
+      ul{
+        li{
+          i{
+            color:$accent-color;
+            margin-right:5px;
+            &:before{ content: '\f054'; }
+          }
+ 
+          &:hover{
+            i{
+              color: $navigation-sub-item-color-hover;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.active{
+    right:0;
+  }
+}
+
+
+.pagination-wrapper{ text-align: center; }

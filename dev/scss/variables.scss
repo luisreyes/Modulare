@@ -1,0 +1,53 @@
+$background-color:#FFF;
+$font-color: #666;
+$accent-color: #E7C416;
+
+$logo-image:'';//../images/modulare.svg
+
+$mobile-menu-height:45px;
+$mobile-header-height:200px;
+
+$header-height:500px;
+$header-image:'';//../images/bike.jpg
+$header-image-size:cover;
+$header-image-repeat:no-repeat;
+$header-image-position:50%;
+
+$link-color: #CAA40E;
+$link-color-hover: $accent-color;
+
+$sidebar-background: #EEE;
+$sidebar-border: #FFF;
+$sidebar-color: #666;
+$sidebar-heading-color: #333;
+
+$footer-background: #333;
+$footer-color: #CCC;
+$footer-heading-color: $accent-color;
+$footer-copyright-align: center;
+$footer-copyright-color: #999;
+$footer-copyright-font-size: x-small;
+
+$navigation-background: #333;
+$navigation-font-family: 'Raleway', sans-serif;
+$navigation-text-transform: uppercase;
+
+$navigation-item-padding: 10px 15px;
+$navigation-item-font-size: 13px;
+$navigation-item-background: trasnparent;
+$navigation-item-background-hover: #2A2A2A;
+$navigation-item-color: #FFF;
+$navigation-item-color-hover: $accent-color;
+
+$navigation-sub-item-padding: 15px 45px 15px 15px;
+$navigation-sub-item-hover-padding: 0;
+$navigation-sub-item-font-size: 12px;
+$navigation-sub-item-background: $navigation-item-background-hover;
+$navigation-sub-item-background-hover: $accent-color;
+$navigation-sub-item-color: #FFF;
+$navigation-sub-item-color-active: $accent-color;
+$navigation-sub-item-color-hover: #333;
+
+
+$post-background-hover: #EEE;
+

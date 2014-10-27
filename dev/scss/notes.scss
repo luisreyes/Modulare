@@ -1,0 +1,28 @@
+ol.notes {
+  padding: 0px;
+  margin: 10px 0px;
+  list-style-type: none;
+  border-bottom: solid 1px #ccc;
+
+  li.note {
+    border-top: solid 1px #ccc;
+    padding: 10px;
+
+    img.avatar {
+      vertical-align: -4px;
+      margin-right: 10px;
+      width: 16px;
+      height: 16px;
+    }
+
+    blockquote {
+      border-color: #eee;
+      padding: 4px 10px;
+      margin: 10px 0px 0px 25px;
+
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+}

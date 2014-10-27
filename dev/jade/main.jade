@@ -1,0 +1,27 @@
+- var sidebarClasses = ' col-sm-8 col-md-9 col-xl-10 '
+- var mainClasses = '{block:IfShowSidebar}{block:IndexPage}{block:IfSidebarOnHomePage}'+sidebarClasses+'{/block:IfSidebarOnHomePage}{/block:IndexPage}{block:SearchPage}{block:IfSidebarOnSearchPage}'+sidebarClasses+'{/block:IfSidebarOnSearchPage}{/block:SearchPage}{block:PermalinkPage}{block:IfSidebarOnPostPage}'+sidebarClasses+'{/block:IfSidebarOnPostPage}{/block:PermalinkPage}{block:IfShowSidebar}'
+
+
+main(class=mainClasses)
+  |{block:SearchPage}
+  h2.initial-caps.accent-color {block:NoSearchResults}Sorry we couldn't find anything tagged {/block:NoSearchResults}{SearchQuery}
+  hr
+  |{/block:SearchPage}
+
+  |{block:TagPage}
+  h2.initial-caps.accent-color {Tag}
+  hr
+  |{/block:TagPage}
+
+  |{block:Posts}
+  div(class="post {block:IndexPage}index-page{/block:IndexPage} {block:PermalinkPage}permalink-page{/block:PermalinkPage} {block:SearchPage}search-page{/block:SearchPage} {PostType}" data-permalink="{Permalink}")
+    include posts
+  |{/block:Posts}
+
+  |{block:Pagination}
+  include pagination
+  |{/block:Pagination}
+
+|{block:IfShowSidebar}
+include sidebar
+|{/block:IfShowSidebar}

@@ -1,0 +1,86 @@
+mixin notes
+  |{block:IfShowPostNotesOnSidebar}
+  |{block:PostNotes}
+  h3.left Notes
+  span.right {NoteCountWithLabel}
+  div.clear
+  |{PostNotes}
+  |{/block:PostNotes}
+  |{/block:IfShowPostNotesOnSidebar}
+
+mixin twitter
+  |{block:IfShowTwitterFeedInSidebar}
+  |{block:Twitter}
+  section.twitter_feed
+    div#twitter(style="display:none;")
+      h3 {text:Twiiter Feed Title}
+        a(href="http://twitter.com/{TwitterUsername}" title="{TwitterUsername} Tweets") 
+          i.fa.fa-twitter.right
+      div#tweets
+  |{/block:Twitter}
+  |{/block:IfShowTwitterFeedInSidebar}
+
+mixin sidebar(data, specialClass)
+  aside(class= specialClass+" sidebar col-xs-12 col-sm-4 col-md-3 col-xl-2")
+    div.sidebar-block= data
+    div.sidebar-block
+      +notes
+    div.sidebar-block
+      +twitter
+    div.sidebar-block
+      section.sidebar-banner
+        |{block:IfShowSidebarBannerAd}
+        div.ad {text:Sidebar Banner Ads}
+        |{/block:IfShowSidebarBannerAd}
+  
+//- Show Sidebar on Home Page
+|{block:IndexPage}
+|{block:IfSidebarOnHomePage}
+
+|{block:PermalinkPage}<!--{/block:PermalinkPage}
+|{block:SearchPage}<!--{/block:SearchPage}
+
++sidebar('{text:Home Page Sidebar}', '{block:PermalinkPage}hidden{/block:PermalinkPage} {block:SearchPage}hidden{/block:SearchPage}')
+
+|{block:PermalinkPage}-->{/block:PermalinkPage}
+|{block:SearchPage}-->{/block:SearchPage}
+
+|{/block:IfSidebarOnHomePage}
+|{/block:IndexPage}
+
+
+|{block:PermalinkPage}
+|{block:IfSidebarOnPostPage}
+
+|{block:IfUseHomePageSidebarForAllPages}
++sidebar('{text:Home Page Sidebar}')
+| <!--
+|{/block:IfUseHomePageSidebarForAllPages}
+
+//- Show Sidebar on Post Page
++sidebar('{text:Post Page Sidebar}')
+
+|{block:IfUseHomePageSidebarForAllPages}
+| -->
+|{/block:IfUseHomePageSidebarForAllPages}
+
+|{/block:IfSidebarOnPostPage}
+|{/block:PermalinkPage}
+
+|{block:SearchPage}
+|{block:IfSidebarOnSearchPage}
+
+|{block:IfUseHomePageSidebarForAllPages}
++sidebar('{text:Home Page Sidebar}')
+| <!--
+|{/block:IfUseHomePageSidebarForAllPages}
+
+//- Show Sidebar on Search Page
++sidebar('{text:Search Page Sidebar}')
+
+|{block:IfUseHomePageSidebarForAllPages}
+| -->
+|{/block:IfUseHomePageSidebarForAllPages}
+
+|{/block:IfSidebarOnSearchPage}
+|{/block:SearchPage}

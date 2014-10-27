@@ -1,0 +1,133 @@
+doctype html
+
+<!--[if IE 8]> <html class="lt-ie10 lt-ie9"> <![endif]-->
+<!--[if IE 9]> <html class="lt-ie10"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html lang="en">
+<!--<![endif]-->
+//=======================================================
+//     __  _______  ____  __  ____    ___    ____  ______
+//    /  |/  / __ \/ __ \/ / / / /   /   |  / __ \/ ____/
+//   / /|_/ / / / / / / / / / / /   / /| | / /_/ / __/   
+//  / /  / / /_/ / /_/ / /_/ / /___/ ___ |/ _, _/ /___   
+// /_/  /_/\____/_____/\____/_____/_/  |_/_/ |_/_____/   
+//=======================================================
+// Author: Luis Reyes                                    
+// Website: http://luisreyes.com                         
+// Github: luisreyes                                     
+// Twitter: @luisreyesdev                                
+// Theme: Modulare                                       
+// Version: 1.1                                          
+//=======================================================
+head
+  <!--[if lt IE 9]>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <![endif]-->
+  meta(charset="utf-8")
+  meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
+  each link in stylesheet
+    link(rel="stylesheet" type="text/css" href=link)
+  
+  title {Title}
+  link(rel="shortcut icon" type="image/x-icon" href="{Favicon}")
+  link(rel="alternate" type="application/rss+xml" href="{RSS}")
+  |{block:Description}
+  meta(name="description" content="{MetaDescription}")
+  |{/block:Description}
+
+  include theme_options
+  include styles
+
+
+
+body
+  section.app-top
+    section.mobile-menu.visible-xs
+      //- Mobile Menu Toggle
+      section#mobile-menu-toggle.mobile-menu-toggle.left
+        i.fa.fa-reorder
+        i.fa.fa-close.hide          
+
+      //- Mobile Search Toggle
+      section#mobile-search-toggle.mobile-search-toggle.right
+        i.fa.fa-search
+    
+    //- Mobile Search Input
+    section#mobile-search.mobile-search.visible-xs
+      form(action="/search" method="get")
+        input(type="text" placeholder="{lang:Search}"  name="q" value="{SearchQuery}")
+
+    section.top-banner.hidden-xs
+      |{block:IfShowHeaderBannerAd}
+      div.ad {text:Header Banner Ad}
+      |{/block:IfShowHeaderBannerAd}
+  
+  header#app-header
+    section.header.container-fluid
+      section.header-logo
+        a(href="{BlogURL}")
+
+
+
+
+  // Navigation      
+  nav.hidden-xs
+    
+    section.navigation.container-fluid
+      // Main Navigation
+      include navigation
+  
+  nav.visible-xs
+    section#mobile-menu.mobile-navigation
+      // Mobile Navigation
+      include navigation
+
+
+
+
+  // Search
+  section.container-fluid
+
+    section.search.hidden-xs
+      // Main Search
+      form#search-form(action="/search" method="get")
+        input(type="text" placeholder="{lang:Search}"  name="q" value="{SearchQuery}") 
+        i#search-icon.fa.fa-search
+      
+
+
+
+
+  // Content
+  section#app-body.body
+    section.container-fluid
+      section.row
+        include main
+
+  // Footer
+  |{block:IfShowFooter}
+  footer#app-footer
+    section.footer.container-fluid
+      |{block:IfShowFooterColumns}
+      input#footer-columns(type="hidden" value="{select:Footer Columns}")
+      div(class="footer-column") {text:Footer Column 1}
+      div(class="footer-column") {text:Footer Column 2}
+      div(class="footer-column") {text:Footer Column 3}
+      div(class="footer-column") {text:Footer Column 4}
+      |{/block:IfShowFooterColumns}
+
+      div.footer-copyright.col-sm-12
+        |{text:Footer Notes}
+      div.clear
+  |{block:IfShowFooter}
+
+
+  include scripts
+  each script in scripts
+    script(type="text/javascript" src=script)
+  // Scripts
+
+
+
+    
+</html>

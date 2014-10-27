@@ -1,0 +1,75 @@
+//===========================================================
+//                     ___           __                      
+//                    / _ \___  ___ / /____                  
+//                   / ___/ _ \(_-</ __(_-<                  
+//                  /_/   \___/___/\__/___/                  
+//                                                           
+//===========================================================
+
+
+//- Render the meta bar at the Head of the post only on the permalink page
+|{block:PermalinkPage}
+
+
+div.meta.head
+  |{block:HasTags} 
+  div.tags
+    i.fa.fa-tags.left
+    ul.right
+      |{block:Tags}
+      li
+        a(href="{TagURL}") &#x23;{Tag}
+      |{block:Tags}
+  |{/block:HasTags}
+
+  div.left {LikeButton size="20"}
+  div.left {ReblogButton size="20"}            
+  |{block:Date}            
+  div.time.left.hidden-xs {TimeAgo}
+  |{/block:Date}
+  div.clear
+|{/block:PermalinkPage}
+
+//- Post BEGIN
+include posts/text
+include posts/answer
+include posts/chat
+include posts/link
+include posts/video
+include posts/audio
+include posts/photo
+include posts/quote
+
+div.clear
+//- Post BEGIN
+
+
+//- Render the meta bar at the Foot of the post
+div.meta.foot
+  |{block:IndexPage}
+  div.open-permalink
+    i.fa.fa-share.left
+    a(href="{Permalink}" title="{lang:See more}") {lang:See more}
+  |{/block:IndexPage}
+  |{block:HasTags} 
+  div.tags
+    i.fa.fa-tags.left
+    ul.right
+      |{block:Tags}
+      li
+        a(href="{TagURL}") &#x23;{Tag}
+      |{block:Tags}
+  |{/block:HasTags}
+
+  |{block:IndexPage}
+  div.left {LikeButton size="20"}
+  div.left {ReblogButton size="20"}
+  |{/block:IndexPage}            
+  |{block:Date}            
+  div.time.left {TimeAgo}
+  |{/block:Date}
+  div.clear
+
+
+
+//=======================  POSTS END  ======================

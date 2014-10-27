@@ -1,0 +1,32 @@
+|{block:Link}
+
+//  _    _      _    
+// | |  (_)_ _ | |__ 
+// | |__| | ' \| / / 
+// |____|_|_||_|_\_\ 
+                  
+section.link-data
+  section.thumb.left
+    a(href="{URL}" title="{Name}" target="{Target}")
+      |{block:Thumbnail}
+      img(src="{Thumbnail}" alt="{Host}")
+      |{/block:Thumbnail}
+
+      i(class="fa fa-globe {block:Thumbnail}hidden{/block:Thumbnail}")
+
+  section.data.left
+    a(href="{URL}" title="{Name}" traget="{Target}")
+      h4.name {Name} 
+
+      |{block:Host}
+      section.host {Host}
+      |{/block:Host}
+  
+  div.clear
+
+
+|{block:Description}
+section.description {Description}
+|{/block:Description}
+
+|{/block:Link}

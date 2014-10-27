@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html class="lt-ie10 lt-ie9"> <![endif]-->
+<!--[if IE 9]> <html class="lt-ie10"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html lang="en">
+<!--<![endif]-->
+<!--=======================================================-->
+<!--     __  _______  ____  __  ____    ___    ____  ______-->
+<!--    /  |/  / __ \/ __ \/ / / / /   /   |  / __ \/ ____/-->
+<!--   / /|_/ / / / / / / / / / / /   / /| | / /_/ / __/   -->
+<!--  / /  / / /_/ / /_/ / /_/ / /___/ ___ |/ _, _/ /___   -->
+<!-- /_/  /_/\____/_____/\____/_____/_/  |_/_/ |_/_____/   -->
+<!--=======================================================-->
+<!-- Author: Luis Reyes                                    -->
+<!-- Website: http://luisreyes.com                         -->
+<!-- Github: luisreyes                                     -->
+<!-- Twitter: @luisreyesdev                                -->
+<!-- Theme: Modulare                                       -->
+<!-- Version: 1.1                                          -->
+<!--=======================================================-->
+
+<head>
+  <!--[if lt IE 9]>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <![endif]-->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.css">
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Raleway:400,600">
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,600">
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto:400,700">
+  <link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="PASTE_CSS_HERE">
+  <title>{Title}</title>
+  <link rel="shortcut icon" type="image/x-icon" href="{Favicon}">
+  <link rel="alternate" type="application/rss+xml" href="{RSS}">{block:Description}
+  <meta name="description" content="{MetaDescription}">{/block:Description}
+  <!--===========================================================-->
+  <!--  ________                   ____       __  _              -->
+  <!-- /_  __/ /  ___ __ _  ___   / __ \___  / /_(_)__  ___  ___ -->
+  <!--  / / / _ \/ -_)  ' \/ -_) / /_/ / _ \/ __/ / _ \/ _ \(_-< -->
+  <!-- /_/ /_//_/\__/_/_/_/\__/  \____/ .__/\__/_/\___/_//_/___/ -->
+  <!--                               /_/                         -->
+  <!--===========================================================-->
+  <meta name="image:Logo" content="">
+  <meta name="color:Font Color" content="#666">
+  <meta name="color:Links" content="#CAA40E">
+  <meta name="color:Links Hover" content="{AccentColor}">
+  <meta name="color:Sidebar Background" content="#EEE">
+  <meta name="color:Sidebar Border" content="#FFF">
+  <meta name="color:Sidebar Font Color" content="#666">
+  <meta name="color:Sidebar Headings Color" content="#333">
+  <meta name="color:Footer Background" content="#333">
+  <meta name="color:Footer Font Color" content="#CCC">
+  <meta name="color:Footer Headings Color" content="{AccentColor}">
+  <meta name="color:Footer Base Font Color" content="#999">
+  <meta name="color:Nav Background" content="#333">
+  <meta name="color:Nav Item Font Color" content="#FFF">
+  <meta name="color:Nav Item Font Hover" content="{AccentColor}">
+  <meta name="color:Nav Item Background Hover" content="#2A2A2A">
+  <meta name="color:Nav Sub Item Font Color" content="#FFF">
+  <meta name="color:Nav Sub Item Font Hover" content="#333">
+  <meta name="color:Nav Sub Item Background" content="#2A2A2A">
+  <meta name="color:Nav Sub Item Background Hover" content="{AccentColor}">
+  <meta name="color:Post Background Hover" content="#EEE">
+  <meta name="color:Post Meta Separator" content="#BBB">
+  <meta name="select:Headings Font" content="'Helvetica Neue',Helvetica,sans-serif" title="Helvetica Neue">
+  <meta name="select:Headings Font" content="'Open Sans',sans-serif" title="Open Sans">
+  <meta name="select:Headings Font" content="'Raleway',sans-serif" title="Raleway">
+  <meta name="select:Headings Font" content="'Roboto',sans-serif" title="Roboto">
+  <meta name="select:Nav Font" content="'Helvetica Neue',Helvetica,sans-serif" title="Helvetica Neue">
+  <meta name="select:Nav Font" content="'Open Sans',sans-serif" title="Open Sans">
+  <meta name="select:Nav Font" content="'Raleway',sans-serif" title="Raleway">
+  <meta name="select:Nav Font" content="'Roboto',sans-serif" title="Roboto">
+  <meta name="select:Body Font" content="'Helvetica Neue',Helvetica,sans-serif" title="Helvetica Neue">
+  <meta name="select:Body Font" content="'Open Sans',sans-serif" title="Open Sans">
+  <meta name="select:Body Font" content="'Raleway',sans-serif" title="Raleway">
+  <meta name="select:Body Font" content="'Roboto',sans-serif" title="Roboto">
+  <meta name="select:Logo Vertical Position" content="0" title="Top">
+  <meta name="select:Logo Vertical Position" content="calc(50% - 100px)" title="Middle">
+  <meta name="select:Logo Vertical Position" content="calc(100% - 100px)" title="Bottom">
+  <meta name="select:Logo Horizontal Position" content="left" title="Left">
+  <meta name="select:Logo Horizontal Position" content="none" title="Center">
+  <meta name="select:Logo Horizontal Position" content="right" title="Right">
+  <meta name="select:Logo Background" content="0,0,0,.45" title="Dark Shade">
+  <meta name="select:Logo Background" content="255,255,255,.45" title="Light Shade">
+  <meta name="select:Logo Background" content="0,0,0,0" title="None">
+  <meta name="select:Footer Base Font Size" content="x-small" title="Small">
+  <meta name="select:Footer Base Font Size" content="small" title="Medium">
+  <meta name="select:Footer Base Font Size" content="medium" title="Normal">
+  <meta name="select:Footer Base Text Align" content="left" title="Left">
+  <meta name="select:Footer Base Text Align" content="center" title="Center">
+  <meta name="select:Footer Base Text Align" content="right" title="Right">
+  <meta name="select:Footer Columns" content="1" title="1">
+  <meta name="select:Footer Columns" content="2" title="2">
+  <meta name="select:Footer Columns" content="3" title="3">
+  <meta name="select:Footer Columns" content="4" title="4">
+  <meta name="if:Show Sidebar" content="1">
+  <meta name="if:Sidebar on the left" content="0">
+  <meta name="if:Show Twitter Feed in Sidebar" content="0">
+  <meta name="if:Show Post Notes on Sidebar" content="1">
+  <meta name="select:Tweets to Show" content="1" title="1">
+  <meta name="select:Tweets to Show" content="2" title="2">
+  <meta name="select:Tweets to Show" content="3" title="3">
+  <meta name="select:Tweets to Show" content="4" title="4">
+  <meta name="select:Tweets to Show" content="5" title="5">
+  <meta name="select:Tweets to Show" content="10" title="10">
+  <meta name="if:Show Header Banner Ad" content="0">
+  <meta name="if:Show Sidebar Banner Ad" content="0">
+  <meta name="if:Sidebar on Home Page" content="1">
+  <meta name="if:Sidebar on Post Page" content="1">
+  <meta name="if:Sidebar on Search Page" content="1">
+  <meta name="if:Use Home Page Sidebar for All Pages" content="0">
+  <meta name="if:Home Button in Navigation" content="1">
+  <meta name="if:Show Footer" content="1">
+  <meta name="if:Show Footer Columns" content="1">
+  <meta name="text:Header Height" content="500">
+  <meta name="text:Max Site Width" content="960">
+  <meta name="text:Custom Navigation List" content="">
+  <meta name="text:Header Banner Ad" content="&lt;img src=&quot;http://dummyimage.com/768x90/666/333.jpg&amp;text=PLACEHOLDER&quot;/&gt;">
+  <meta name="text:Sidebar Banner Ads" content="&lt;img src=&quot;http://dummyimage.com/250/666/333.jpg&amp;text=PLACEHOLDER&quot;/&gt;">
+  <meta name="text:Home Page Sidebar" content="&lt;h3&gt;Sidebar&lt;/h3&gt;&lt;p&gt;Change this text in the Theme Options&lt;/p&gt;">
+  <meta name="text:Post Page Sidebar" content="&lt;h3&gt;Sidebar&lt;/h3&gt;&lt;p&gt;Change this text in the Theme Options&lt;/p&gt;">
+  <meta name="text:Search Page Sidebar" content="&lt;h3&gt;Sidebar&lt;/h3&gt;&lt;p&gt;Change this text in the Theme Options&lt;/p&gt;">
+  <meta name="text:Footer Column 1" content="&lt;h3&gt;Column 1&lt;/h3&gt;&lt;p&gt;Change this text in the Theme Options&lt;/p&gt;">
+  <meta name="text:Footer Column 2" content="&lt;h3&gt;Column 2&lt;/h3&gt;&lt;p&gt;Change this text in the Theme Options&lt;/p&gt;">
+  <meta name="text:Footer Column 3" content="&lt;h3&gt;Column 3&lt;/h3&gt;&lt;p&gt;Change this text in the Theme Options&lt;/p&gt;">
+  <meta name="text:Footer Column 4" content="&lt;h3&gt;Column 4&lt;/h3&gt;&lt;p&gt;Change this text in the Theme Options&lt;/p&gt;">
+  <meta name="text:Footer Notes" content="">
+  <meta name="text:Twiiter Feed Title" content="Tweets">
+  <meta name="text:Google Analytics Tracking ID" content="">
+  <!--===========================================================-->
+  <!--                    ______       __                        -->
+  <!--                   / __/ /___ __/ /__ ___                  -->
+  <!--                  _\ \/ __/ // / / -_|_-<                  -->
+  <!--                 /___/\__/\_, /_/\__/___/                  -->
+  <!--                         /___/                             -->
+  <!--===========================================================-->
+  <style>
+    .container-fluid{ max-width:{text:Max Site Width}px }
+    
+    .top-banner{ background-color: {AccentColor} }
+    
+    .search {
+      background: {color:Nav Background};
+    }
+    
+    .search i {
+        color: {color:Nav Item Font Color}
+    }
+    
+    .search i:hover {
+        color: {AccentColor}
+    }
+    
+    .search input[type=text],
+    .mobile-search input[type=text] {
+        color: #666;
+    }
+    
+    .accent{ color: {AccentColor} }
+    
+    .mobile-search {
+        background: {color:Nav Item Background Hover};
+    }
+    
+    body {
+        background-color: {BackgroundColor};
+        color: {color:Font Color};
+        font-family:{select:Body Font}
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        font-family: {select:Headings Font};
+    }
+    
+    a:link,
+    a:visited {
+        color: {color:Links};
+    }
+    
+    a:active,
+    a:hover {
+        color: {color:Links Hover};
+    }
+    
+    table {
+        background: #DDD;
+        border-color: #BBB;
+    }
+    
+    table thead tr {
+        background: #999
+    }
+    
+    table thead tr th {
+        font-family: {select:Headings Font};
+        color: #FFF;
+    }
+    
+    table tbody tr {
+        background-color: #EEE
+    }
+    
+    table tbody tr:nth-child(2n) {
+        background-color: #DDD
+    }
+    
+    table tbody tr td {
+        color: #666;
+    }
+    
+    .app-top {
+        border-bottom-color: {AccentColor};
+    }
+    
+    :focus {
+        outline-color: {AccentColor}
+    }
+    
+    ::selection { color:{color:Font Color}; background: {AccentColor} }
+    ::-webkit-selection { color:{color:Font Color}; background: {AccentColor} }
+    ::-moz-selection { color:{color:Font Color}; background: {AccentColor} }
+    
+    img{ border: 1px solid {color:Nav Background}; }
+    
+    header {
+        background-color: {color:Nav Background};
+        background-image: url({HeaderImage});
+    }
+    
+    header .header {
+        height: {text:Header Height}px
+    }
+    
+    header .header .header-logo {
+        width: 290px;
+        height: 100px;
+        background-image: url({image:Logo});
+        background-color: rgba({select:Logo Background});
+        top: {select:Logo Vertical Position};
+        float:{select:Logo Horizontal Position}
+    }
+    
+    {block:IfSidebarOnTheLeft}
+    main{ float:right !important }
+    {/block:IfSidebarOnTheLeft}
+    
+    aside {
+        background: {color:Sidebar Background};
+        border-color: {color:Sidebar Border};
+        border-left: 2px solid {AccentColor};
+        color: {color:Sidebar Font Color}
+    }
+    
+    aside h1, aside h2, aside h3, aside h4, aside h5, aside h6 {
+        color: {color:Sidebar Headings Color}
+    }
+    
+    footer {
+        color: {color:Footer Font Color};
+        background: {color:Footer Background}
+    }
+    
+    footer h1, footer h2, footer h3, footer h4, footer h5, footer h6 {
+        color: {color:Footer Headings Color}
+    }
+    
+    footer .footer-copyright {
+        text-align: {select:Footer Base Text Align};
+        font-size: {select:Footer Base Font Size};
+        color: {color:Footer Base Font Color}
+    }
+    
+    .mobile-menu {
+        background: {color:Nav Background};
+        font-family: {select:Nav Font};
+        color: {color:Nav Item Font Color};
+    }
+    
+    .mobile-menu i {
+        color: {color:Nav Item Font Color};
+    }
+    
+    .mobile-menu i.active,
+    .mobile-menu i:active,
+    .mobile-menu i:focus,
+    .mobile-menu i:hover {
+        color: {AccentColor}
+    }
+    
+    nav,
+    .read_more_container {
+        background: {color:Nav Background};
+        color: {color:Nav Item Font Color};
+        font-family: {select:Nav Font}
+    }
+    
+    nav a:link,
+    nav a:visited {
+        color: {color:Nav Item Font Color};
+    }
+    
+    nav a:active,
+    nav a:hover {
+        color: {AccentColor};
+    }
+    
+    nav ul li:hover,
+    .read_more_container:hover {
+        background: {color:Nav Item Background Hover}
+    }
+    
+    nav ul li a:link,
+    nav ul li a:visited,
+    .read_more_container a:link,
+    .read_more_container a:visited{
+        color: {color:Nav Item Font Color};
+    }
+    
+    nav ul li a:active,
+    nav ul li a:hover,
+    .read_more_container a:active,
+    .read_more_container a:hover {
+        color: {color:Nav Item Font Hover}
+    }
+    
+    nav ul li ul li:hover {
+        background: {color:Nav Sub Item Background Hover};
+        color: {color:Nav Sub Item Font Hover};
+    }
+    
+    nav ul li ul li a {
+        color: {color:Nav Sub Item Font Color};
+    }
+    
+    nav ul li ul li a:hover {
+        color: {color:Nav Sub Item Font Hover}
+    }
+    
+    nav ul li ul li a:active {
+        color: {AccentColor}
+    }
+    
+    .navigation ul li ul li {
+        background: {color:Nav Sub Item Background};
+        // CHECK THIS \/
+        color: {color:Nav Sub Item Font Color};
+    }
+    
+    .navigation ul li ul li a {
+        color: {color:Nav Sub Item Font Color};
+    }
+    
+    .navigation ul li ul li a:active,
+    .navigation ul li ul li a:hover {
+        color: {color:Nav Sub Item Font Hover}
+    }
+    
+    .mobile-navigation {
+        background: {color:Nav Background};
+    }
+    
+    .mobile-navigation>ul>li {
+        border-bottom-color: {color:Nav Item Background Hover}
+    }
+    
+    .mobile-navigation>ul>li ul li i {
+        color: {AccentColor};
+    }
+    
+    .mobile-navigation>ul>li ul li i:before {
+        content: '\f054'
+    }
+    
+    .mobile-navigation>ul>li ul li:hover i {
+        color: {color:Nav Sub Item Background}
+    }
+    
+    #twitter #tweets a .content{border-top-color:{color:Sidebar Border}}
+    
+    #twitter #tweets a:link,
+    #twitter #tweets a:visited{color:{color:Links Hover}}
+    #twitter #tweets a:active,
+    #twitter #tweets a:hover{color:{color:Links}}
+    
+    ol.notes{ border-bottom-color:{color:Sidebar Border} }
+    ol.notes li.note{ border-top-color:{color:Sidebar Border} }
+    ol.notes li.note blockquote{ border-color:{color:Sidebar Border} }
+    
+    .post.index-page:hover{
+      border-left: 2px solid {AccentColor};
+      background-color:{color:Post Background Hover}
+    }
+    
+    .post .meta.head, .post .meta.foot{
+      border-color: {color:Post Meta Separator};
+    }
+    
+    .post blockquote{ border-left: 5px solid {color:Post Meta Separator}; }
+    
+    .post .chat-label{ 
+      color:{AccentColor};
+      font-family:{select:Headings Font}
+    }
+    
+    .post .plays{ 
+      background-color:{AccentColor};
+      color: {color:Nav Background}
+    }
+    
+    .quote-wrapper .fa{ color: {AccentColor} }
+    
+    .accent-color{ color: {AccentColor} }
+    
+    .modulare-audio .art{
+      border-color: {AccentColor};
+      background-color:{color:Nav Background}
+    }
+    
+    
+    .modulare-audio .artist,
+    .modulare-audio .track,
+    .modulare-audio .album,
+    .modulare-audio .playcount{ 
+      background-color:{AccentColor};
+      color: {color:Nav Background}
+    }
+    
+    .modulare-audio .artist .label,
+    .modulare-audio .track .label,
+    .modulare-audio .album .label,
+    .modulare-audio .playcount .label{ 
+      color: {color:Nav Item Color}
+    }
+    
+    .pagination>li>a, .pagination>li>span{ color: {AccentColor} }
+    
+    .pagination>.active>a,
+    .pagination>.active>span,
+    .pagination>.active>a:hover,
+    .pagination>.active>span:hover,
+    .pagination>.active>a:focus,
+    .pagination>.active>span:focus{
+      color: {color:Nav Item Color};
+      background-color:{AccentColor};
+      border-color:{AccentColor}
+    }
+    
+    .pagination>li>a:hover,
+    .pagination>li>span:hover,
+    .pagination>li>a:focus,
+    .pagination>li>span:focus{
+      color: {color:Nav Background};
+    }
+    
+    @media (max-width: 768px) {
+    
+        header {
+            border-bottom-color: {color:Nav Background}
+        }
+    
+        header .header {
+            height: 200px
+        }
+    
+    }
+    
+    {CustomCSS}
+  </style>
+</head>
+
+<body>
+  <section class="app-top">
+    <section class="mobile-menu visible-xs">
+      <section id="mobile-menu-toggle" class="mobile-menu-toggle left"><i class="fa fa-reorder"></i><i class="fa fa-close hide">         </i>
+      </section>
+      <section id="mobile-search-toggle" class="mobile-search-toggle right"><i class="fa fa-search"></i>
+      </section>
+    </section>
+    <section id="mobile-search" class="mobile-search visible-xs">
+      <form action="/search" method="get">
+        <input type="text" placeholder="{lang:Search}" name="q" value="{SearchQuery}">
+      </form>
+    </section>
+    <section class="top-banner hidden-xs">{block:IfShowHeaderBannerAd}
+      <div class="ad">{text:Header Banner Ad}</div>{/block:IfShowHeaderBannerAd}
+    </section>
+  </section>
+  <header id="app-header">
+    <section class="header container-fluid">
+      <section class="header-logo">
+        <a href="{BlogURL}"></a>
+      </section>
+    </section>
+  </header>
+  <!-- Navigation      -->
+  <nav class="hidden-xs">
+    <section class="navigation container-fluid">
+      <!-- Main Navigation-->
+      <ul>{block:IfHomeButtonInNavigation}
+        <li> <a href="/"><i class="fa"></i><span>{lang:Home}</span></a>
+        </li>{/block:IfHomeButtonInNavigation} {text:Custom Navigation List} {block:AskEnabled}
+        <li><a href="/ask" title="{AskLabel}">{AskLabel}</a>
+        </li>{/block:AskEnabled} {block:SubmissionsEnabled}
+        <li><a href="/submit" title="{SubmitLabel}">{SubmitLabel}</a>
+        </li>{/block:SubmissionsEnabled} {block:HasPages} {block:Pages}
+        <li> <a href="{URL}"><i class="fa"></i><span>{Label}</span></a>
+        </li>{/block:Pages} {/block:HasPages}
+      </ul>
+    </section>
+  </nav>
+  <nav class="visible-xs">
+    <section id="mobile-menu" class="mobile-navigation">
+      <!-- Mobile Navigation-->
+      <ul>{block:IfHomeButtonInNavigation}
+        <li> <a href="/"><i class="fa"></i><span>{lang:Home}</span></a>
+        </li>{/block:IfHomeButtonInNavigation} {text:Custom Navigation List} {block:AskEnabled}
+        <li><a href="/ask" title="{AskLabel}">{AskLabel}</a>
+        </li>{/block:AskEnabled} {block:SubmissionsEnabled}
+        <li><a href="/submit" title="{SubmitLabel}">{SubmitLabel}</a>
+        </li>{/block:SubmissionsEnabled} {block:HasPages} {block:Pages}
+        <li> <a href="{URL}"><i class="fa"></i><span>{Label}</span></a>
+        </li>{/block:Pages} {/block:HasPages}
+      </ul>
+    </section>
+  </nav>
+  <!-- Search-->
+  <section class="container-fluid">
+    <section class="search hidden-xs">
+      <!-- Main Search-->
+      <form id="search-form" action="/search" method="get">
+        <input type="text" placeholder="{lang:Search}" name="q" value="{SearchQuery}"><i id="search-icon" class="fa fa-search"></i>
+      </form>
+    </section>
+  </section>
+  <!-- Content-->
+  <section id="app-body" class="body">
+    <section class="container-fluid">
+      <section class="row">
+        <main class="{block:IfShowSidebar}{block:IndexPage}{block:IfSidebarOnHomePage} col-sm-8 col-md-9 col-xl-10 {/block:IfSidebarOnHomePage}{/block:IndexPage}{block:SearchPage}{block:IfSidebarOnSearchPage} col-sm-8 col-md-9 col-xl-10 {/block:IfSidebarOnSearchPage}{/block:SearchPage}{block:PermalinkPage}{block:IfSidebarOnPostPage} col-sm-8 col-md-9 col-xl-10 {/block:IfSidebarOnPostPage}{/block:PermalinkPage}{block:IfShowSidebar}">{block:SearchPage}
+          <h2 class="initial-caps accent-color">{block:NoSearchResults}Sorry we couldn't find anything tagged {/block:NoSearchResults}{SearchQuery}</h2>
+          <hr>{/block:SearchPage} {block:TagPage}
+          <h2 class="initial-caps accent-color">{Tag}</h2>
+          <hr>{/block:TagPage} {block:Posts}
+          <div data-permalink="{Permalink}" class="post {block:IndexPage}index-page{/block:IndexPage} {block:PermalinkPage}permalink-page{/block:PermalinkPage} {block:SearchPage}search-page{/block:SearchPage} {PostType}">
+            <!--===========================================================-->
+            <!--                     ___           __                      -->
+            <!--                    / _ \___  ___ / /____                  -->
+            <!--                   / ___/ _ \(_-</ __(_-<                  -->
+            <!--                  /_/   \___/___/\__/___/                  -->
+            <!--                                                           -->
+            <!--===========================================================-->
+            {block:PermalinkPage}
+            <div class="meta head">{block:HasTags}
+              <div class="tags"><i class="fa fa-tags left"></i>
+                <ul class="right">{block:Tags}
+                  <li><a href="{TagURL}">&#x23;{Tag}</a>
+                  </li>{block:Tags}
+                </ul>
+              </div>{/block:HasTags}
+              <div class="left">{LikeButton size="20"}</div>
+              <div class="left">{ReblogButton size="20"}</div>{block:Date}
+              <div class="time left hidden-xs">{TimeAgo}</div>{/block:Date}
+              <div class="clear"></div>
+            </div>{/block:PermalinkPage}{block:Text}
+            <!--  _____        _    -->
+            <!-- |_   _|____ _| |_  -->
+            <!--   | |/ -_) \ /  _| -->
+            <!--   |_|\___/_\_\\__| -->
+            {block:Title}
+            <h2>{Title}</h2>{/block:Title}
+            <section>{Body}</section>{/block:Text}{block:Answer}
+            <!--    _                           -->
+            <!--   /_\  _ _  ____ __ _____ _ _  -->
+            <!--  / _ \| ' \(_-< V  V / -_) '_| -->
+            <!-- /_/ \_\_||_/__/\_/\_/\___|_|   -->
+            <div class="question">
+              <img src="{AskerPortraitURL-24}" class="left">
+              <h3 class="left">{Question}</h3>
+              <div class="clear"></div>
+            </div>{block:Answerer}
+            <div class="answer">
+              <img src="{AnswererPortraitURL-16}" class="left">
+              <h5 class="left">{Answer}</h5>
+              <div class="answerer">{Answerer}</div>
+            </div>{/block:Answerer}
+            <div class="replies">{Replies}</div>{/block:Answer}{block:Chat}
+            <!--   ___ _         _    -->
+            <!--  / __| |_  __ _| |_  -->
+            <!-- | (__| ' \/ _` |  _| -->
+            <!--  \___|_||_\__,_|\__| -->
+            {block:Title}
+            <h2>{Title}</h2>{/block:Title} {block:Lines}
+            <div class="chat-row">{block:Label}<span class="chat-label">{Label}  </span>{/block:Label}<span class="chat-line {block:Label}labeled{/block:Label}">{Line}</span>
+            </div>{/block:Lines} {/block:Chat}{block:Link}
+            <!--  _    _      _    -->
+            <!-- | |  (_)_ _ | |__ -->
+            <!-- | |__| | ' \| / / -->
+            <!-- |____|_|_||_|_\_\ -->
+            <section class="link-data">
+              <section class="thumb left"><a href="{URL}" title="{Name}" target="{Target}">{block:Thumbnail}<img src="{Thumbnail}" alt="{Host}">{/block:Thumbnail}<i class="fa fa-globe {block:Thumbnail}hidden{/block:Thumbnail}"></i></a>
+              </section>
+              <section class="data left">
+                <a href="{URL}" title="{Name}" traget="{Target}">
+                  <h4 class="name">{Name} </h4>{block:Host}
+                  <section class="host">{Host}</section>{/block:Host}</a>
+              </section>
+              <div class="clear"></div>
+            </section>{block:Description}
+            <section class="description">{Description}</section>{/block:Description} {/block:Link}{block:Video}
+            <!-- __   ___    _          -->
+            <!-- \ \ / (_)__| |___ ___  -->
+            <!--  \ V /| / _` / -_) _ \ -->
+            <!--   \_/ |_\__,_\___\___/ -->
+            <section class="video-wrapper">{Video-700}</section>{block:PlayCount}
+            <section class="plays">{PlayCountWithLabel}</section>{/block:PlayCount} {block:Caption}
+            <section class="caption">{Caption}</section>{/block:Caption} {/block:Video}{block:Audio}
+            <!--    _          _ _      -->
+            <!--   /_\ _  _ __| (_)___  -->
+            <!--  / _ \ || / _` | / _ \ -->
+            <!-- /_/ \_\_,_\__,_|_\___/ -->
+
+            {block:ExternalAudio}
+            <section class="modulare-audio">
+              <section class="col-sm-6 col-xs-12 full">
+                <section style="{block:AlbumArt} background-image:url('{AlbumArtURL}'); {/block:AlbumArt}" class="art full">{block:AudioPlayer}
+                  <section class="player">{AudioPlayer}</section>{/block:AudioPlayer}
+                </section>
+              </section>
+              <section class="col-sm-6 col-xs-12">{block:Artist}
+                <section class="artist"><span class="label">Artist: </span><span>{Artist}</span>
+                </section>{/block:Artist} {block:TrackName}
+                <section class="track"><span class="label">Track: </span><span>{TrackName}</span>
+                </section>{/block:TrackName} {block:Album}
+                <section class="album"><span class="label">Album: </span><span>{Album}</span>
+                </section>{/block:Album}
+                <section class="playcount"><span class="label">{lang:Plays}: </span><span>{PlayCount}</span>
+                </section>
+              </section>
+              <div class="clear"></div>
+            </section>{/block:ExternalAudio} {block:Caption}
+            <section class="caption">{Caption}</section>{/block:Caption} {/block:Audio}{block:Photo}
+            <!--  ___ _        _        -->
+            <!-- | _ \ |_  ___| |_ ___  -->
+            <!-- |  _/ ' \/ _ \  _/ _ \ -->
+            <!-- |_| |_||_\___/\__\___/ -->
+
+            {block:LinkURL}<a href="{LinkURL}" alt="{PhotoAlt}">{/block:LinkURL}<img src="{PhotoURL-500}"></a>{block:Caption}
+            <section class="caption">{Caption}</section>{/block:Caption} {/block:Photo}{block:Quote}
+            <!--   ___           _        -->
+            <!--  / _ \ _  _ ___| |_ ___  -->
+            <!-- | (_) | || / _ \  _/ -_) -->
+            <!--  \__\_\\_,_\___/\__\___| -->
+
+            <section class="quote-wrapper">
+              <div class="{Length}"><i class="fa fa-quote-left"></i><span class="quote-text">{Quote}</span><i class="fa fa-quote-right"> </i>
+              </div>
+            </section>{block:Source}
+            <section class="quote-source">— {Source}</section>{/block:Source} {/block:Quote}
+            <div class="clear"></div>
+
+            <div class="meta foot">{block:IndexPage}
+              <div class="open-permalink"><i class="fa fa-share left"></i><a href="{Permalink}" title="{lang:See more}">{lang:See more}</a>
+              </div>{/block:IndexPage} {block:HasTags}
+              <div class="tags"><i class="fa fa-tags left"></i>
+                <ul class="right">{block:Tags}
+                  <li><a href="{TagURL}">&#x23;{Tag}</a>
+                  </li>{block:Tags}
+                </ul>
+              </div>{/block:HasTags} {block:IndexPage}
+              <div class="left">{LikeButton size="20"}</div>
+              <div class="left">{ReblogButton size="20"}</div>{/block:IndexPage} {block:Date}
+              <div class="time left">{TimeAgo}</div>{/block:Date}
+              <div class="clear"></div>
+            </div>
+            <!--=======================  POSTS END  ======================-->
+          </div>{/block:Posts} {block:Pagination}
+          <div class="pagination-wrapper">{block:Pagination}
+            <ul class="pagination">{block:PreviousPage}
+              <li><a href="{PreviousPage}"><i class="fa fa-arrow-left"></i></a>
+              </li>{/block:PreviousPage} {block:JumpPagination length="5"} {block:CurrentPage}
+              <li class="active"><a href="#">
+                   
+                  {PageNumber}<span class="sr-only">{lang:CurrentPage of TotalPages} </span></a>
+              </li>{/block:CurrentPage} {block:JumpPage}
+              <li><a href="{URL}">{PageNumber}</a>
+              </li>{/block:JumpPage} {/block:JumpPagination} {block:NextPage}
+              <li><a href="{NextPage}"><i class="fa fa-arrow-right"></i></a>
+              </li>{/block:NextPage}
+            </ul>{/block:Pagination}
+          </div>{/block:Pagination}
+        </main>{block:IfShowSidebar}{block:IndexPage} {block:IfSidebarOnHomePage} {block:PermalinkPage}
+        <!--{/block:PermalinkPage}
+        {block:SearchPage}<!--{/block:SearchPage}
+                <aside class="{block:PermalinkPage}hidden{/block:PermalinkPage} {block:SearchPage}hidden{/block:SearchPage} sidebar col-xs-12 col-sm-4 col-md-3 col-xl-2">
+                  <div class="sidebar-block">{text:Home Page Sidebar}</div>
+                  <div class="sidebar-block">
+                            {block:IfShowPostNotesOnSidebar}
+                            {block:PostNotes}
+                            <h3 class="left">Notes</h3><span class="right">{NoteCountWithLabel}</span>
+                            <div class="clear"></div>{PostNotes}
+                            {/block:PostNotes}
+                            {/block:IfShowPostNotesOnSidebar}
+                  </div>
+                  <div class="sidebar-block">
+                            {block:IfShowTwitterFeedInSidebar}
+                            {block:Twitter}
+                            <section class="twitter_feed">
+                              <div id="twitter" style="display:none;">
+                                <h3>{text:Twiiter Feed Title}<a href="http://twitter.com/{TwitterUsername}" title="{TwitterUsername} Tweets"> <i class="fa fa-twitter right"></i></a></h3>
+                                <div id="tweets"></div>
+                              </div>
+                            </section>{/block:Twitter}
+                            {/block:IfShowTwitterFeedInSidebar}
+                  </div>
+                  <div class="sidebar-block">
+                    <section class="sidebar-banner">{block:IfShowSidebarBannerAd}
+                      <div class="ad">{text:Sidebar Banner Ads}</div>{/block:IfShowSidebarBannerAd}
+                    </section>
+                  </div>
+                </aside>{block:PermalinkPage}-->{/block:PermalinkPage} {block:SearchPage}-->{/block:SearchPage} {/block:IfSidebarOnHomePage} {/block:IndexPage} {block:PermalinkPage} {block:IfSidebarOnPostPage} {block:IfUseHomePageSidebarForAllPages}
+        <aside class="undefined sidebar col-xs-12 col-sm-4 col-md-3 col-xl-2">
+          <div class="sidebar-block">{text:Home Page Sidebar}</div>
+          <div class="sidebar-block">
+            {block:IfShowPostNotesOnSidebar} {block:PostNotes}
+            <h3 class="left">Notes</h3><span class="right">{NoteCountWithLabel}</span>
+            <div class="clear"></div>{PostNotes} {/block:PostNotes} {/block:IfShowPostNotesOnSidebar}
+          </div>
+          <div class="sidebar-block">
+            {block:IfShowTwitterFeedInSidebar} {block:Twitter}
+            <section class="twitter_feed">
+              <div id="twitter" style="display:none;">
+                <h3>{text:Twiiter Feed Title}<a href="http://twitter.com/{TwitterUsername}" title="{TwitterUsername} Tweets"> <i class="fa fa-twitter right"></i></a></h3>
+                <div id="tweets"></div>
+              </div>
+            </section>{/block:Twitter} {/block:IfShowTwitterFeedInSidebar}
+          </div>
+          <div class="sidebar-block">
+            <section class="sidebar-banner">{block:IfShowSidebarBannerAd}
+              <div class="ad">{text:Sidebar Banner Ads}</div>{/block:IfShowSidebarBannerAd}
+            </section>
+          </div>
+        </aside>
+        <!--
+        {/block:IfUseHomePageSidebarForAllPages}
+                <aside class="undefined sidebar col-xs-12 col-sm-4 col-md-3 col-xl-2">
+                  <div class="sidebar-block">{text:Post Page Sidebar}</div>
+                  <div class="sidebar-block">
+                            {block:IfShowPostNotesOnSidebar}
+                            {block:PostNotes}
+                            <h3 class="left">Notes</h3><span class="right">{NoteCountWithLabel}</span>
+                            <div class="clear"></div>{PostNotes}
+                            {/block:PostNotes}
+                            {/block:IfShowPostNotesOnSidebar}
+                  </div>
+                  <div class="sidebar-block">
+                            {block:IfShowTwitterFeedInSidebar}
+                            {block:Twitter}
+                            <section class="twitter_feed">
+                              <div id="twitter" style="display:none;">
+                                <h3>{text:Twiiter Feed Title}<a href="http://twitter.com/{TwitterUsername}" title="{TwitterUsername} Tweets"> <i class="fa fa-twitter right"></i></a></h3>
+                                <div id="tweets"></div>
+                              </div>
+                            </section>{/block:Twitter}
+                            {/block:IfShowTwitterFeedInSidebar}
+                  </div>
+                  <div class="sidebar-block">
+                    <section class="sidebar-banner">{block:IfShowSidebarBannerAd}
+                      <div class="ad">{text:Sidebar Banner Ads}</div>{/block:IfShowSidebarBannerAd}
+                    </section>
+                  </div>
+                </aside>{block:IfUseHomePageSidebarForAllPages}
+        -->
+        {/block:IfUseHomePageSidebarForAllPages} {/block:IfSidebarOnPostPage} {/block:PermalinkPage} {block:SearchPage} {block:IfSidebarOnSearchPage} {block:IfUseHomePageSidebarForAllPages}
+        <aside class="undefined sidebar col-xs-12 col-sm-4 col-md-3 col-xl-2">
+          <div class="sidebar-block">{text:Home Page Sidebar}</div>
+          <div class="sidebar-block">
+            {block:IfShowPostNotesOnSidebar} {block:PostNotes}
+            <h3 class="left">Notes</h3><span class="right">{NoteCountWithLabel}</span>
+            <div class="clear"></div>{PostNotes} {/block:PostNotes} {/block:IfShowPostNotesOnSidebar}
+          </div>
+          <div class="sidebar-block">
+            {block:IfShowTwitterFeedInSidebar} {block:Twitter}
+            <section class="twitter_feed">
+              <div id="twitter" style="display:none;">
+                <h3>{text:Twiiter Feed Title}<a href="http://twitter.com/{TwitterUsername}" title="{TwitterUsername} Tweets"> <i class="fa fa-twitter right"></i></a></h3>
+                <div id="tweets"></div>
+              </div>
+            </section>{/block:Twitter} {/block:IfShowTwitterFeedInSidebar}
+          </div>
+          <div class="sidebar-block">
+            <section class="sidebar-banner">{block:IfShowSidebarBannerAd}
+              <div class="ad">{text:Sidebar Banner Ads}</div>{/block:IfShowSidebarBannerAd}
+            </section>
+          </div>
+        </aside>
+        <!--
+        {/block:IfUseHomePageSidebarForAllPages}
+                <aside class="undefined sidebar col-xs-12 col-sm-4 col-md-3 col-xl-2">
+                  <div class="sidebar-block">{text:Search Page Sidebar}</div>
+                  <div class="sidebar-block">
+                            {block:IfShowPostNotesOnSidebar}
+                            {block:PostNotes}
+                            <h3 class="left">Notes</h3><span class="right">{NoteCountWithLabel}</span>
+                            <div class="clear"></div>{PostNotes}
+                            {/block:PostNotes}
+                            {/block:IfShowPostNotesOnSidebar}
+                  </div>
+                  <div class="sidebar-block">
+                            {block:IfShowTwitterFeedInSidebar}
+                            {block:Twitter}
+                            <section class="twitter_feed">
+                              <div id="twitter" style="display:none;">
+                                <h3>{text:Twiiter Feed Title}<a href="http://twitter.com/{TwitterUsername}" title="{TwitterUsername} Tweets"> <i class="fa fa-twitter right"></i></a></h3>
+                                <div id="tweets"></div>
+                              </div>
+                            </section>{/block:Twitter}
+                            {/block:IfShowTwitterFeedInSidebar}
+                  </div>
+                  <div class="sidebar-block">
+                    <section class="sidebar-banner">{block:IfShowSidebarBannerAd}
+                      <div class="ad">{text:Sidebar Banner Ads}</div>{/block:IfShowSidebarBannerAd}
+                    </section>
+                  </div>
+                </aside>{block:IfUseHomePageSidebarForAllPages}
+        -->
+        {/block:IfUseHomePageSidebarForAllPages} {/block:IfSidebarOnSearchPage} {/block:SearchPage}{/block:IfShowSidebar}
+      </section>
+    </section>
+  </section>
+  <!-- Footer-->{block:IfShowFooter}
+  <footer id="app-footer">
+    <section class="footer container-fluid">{block:IfShowFooterColumns}
+      <input id="footer-columns" type="hidden" value="{select:Footer Columns}">
+      <div class="footer-column">{text:Footer Column 1}</div>
+      <div class="footer-column">{text:Footer Column 2}</div>
+      <div class="footer-column">{text:Footer Column 3}</div>
+      <div class="footer-column">{text:Footer Column 4}</div>{/block:IfShowFooterColumns}
+      <div class="footer-copyright col-sm-12">{text:Footer Notes}</div>
+      <div class="clear"></div>
+    </section>
+  </footer>{block:IfShowFooter}
+  <!-- Google Analytics-->
+  <script type="text/javascript">
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    
+    ga('create', '{text:Google Analytics Tracking ID}', 'auto');
+    ga('send', 'pageview');
+  </script>{block:IfShowTwitterFeedInSidebar} {block:Twitter}
+  <script type="text/javascript">
+    function recent_tweets(data) {
+    
+      var c = (data.length >= {select:Tweets to Show}) ? {select:Tweets to Show} : data.length;
+      
+      for (i=0; i<c; i++) {
+        document.getElementById("tweets").innerHTML =
+          document.getElementById("tweets").innerHTML +
+          '<a href="http://twitter.com/{TwitterUsername}/status/' +
+          (data[i].id_str ? data[i].id_str : data[i].id) +
+          '"><div class="content">' + data[i].text +
+          '</div></a>';
+      }
+      document.getElementById("twitter").style.display = 'block';
+    }
+  </script>
+  <script type="text/javascript" src="/tweets.js"></script>{/block:Twitter} {/block:IfShowTwitterFeedInSidebar}
+  <script type="text/javascript" src="http://static.tumblr.com/qxi8drx/NdXndr3xc/lib.js"></script>
+  <script type="text/javascript" src="http://static.tumblr.com/qxi8drx/9Dkndyrqe/modulare.js"></script>
+  <!-- Scripts-->
+
+
+
+</body>
+
+</html>

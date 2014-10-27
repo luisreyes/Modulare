@@ -1,0 +1,32 @@
+@media (max-width: 768px) {
+  .app-top {
+    position: fixed;
+    top: 0;
+  }
+
+
+
+  .app-top+header { margin-top:#{$mobile-menu-height+2}; }
+
+  header{
+    border-bottom:3px solid $navigation-background;
+    background-size: 200%;
+    .header{ 
+      height: $mobile-header-height;
+      .header-logo{
+        float:none;
+      }
+    }
+  }
+
+  main{ margin-top: 20px; }
+  
+  p{text-align: left;}
+
+  .modulare-audio{
+    .artist,.track,.album,.playcount{ 
+      padding:10px;
+      margin:10px 0;
+    }
+  }
+}

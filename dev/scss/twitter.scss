@@ -1,0 +1,23 @@
+#twitter{
+  #tweets{
+    font-size: small;
+    a{
+      &:link,
+      &:visited{
+        color: $font-color;
+      }
+
+      &:hover,
+      &:active{
+        color: $accent-color;
+      }
+
+
+      .content{
+        padding: 10px 0;
+        margin-top: 10px;
+        border-top: 1px solid $sidebar-border;
+      }
+    }
+  }
+}

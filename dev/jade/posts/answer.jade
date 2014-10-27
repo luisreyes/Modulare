@@ -1,0 +1,22 @@
+|{block:Answer}
+
+//    _                           
+//   /_\  _ _  ____ __ _____ _ _  
+//  / _ \| ' \(_-< V  V / -_) '_| 
+// /_/ \_\_||_/__/\_/\_/\___|_|   
+
+div.question
+  img.left(src="{AskerPortraitURL-24}")
+  h3.left {Question}
+  div.clear
+
+|{block:Answerer}
+div.answer
+  img.left(src="{AnswererPortraitURL-16}")
+  h5.left {Answer}
+  div.answerer {Answerer}
+|{/block:Answerer}
+
+div.replies {Replies}
+    
+|{/block:Answer}

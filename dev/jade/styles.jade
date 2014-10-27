@@ -1,0 +1,340 @@
+//===========================================================
+//                    ______       __                        
+//                   / __/ /___ __/ /__ ___                  
+//                  _\ \/ __/ // / / -_|_-<                  
+//                 /___/\__/\_, /_/\__/___/                  
+//                         /___/                             
+//===========================================================
+style.
+
+  .container-fluid{ max-width:{text:Max Site Width}px }
+  
+  .top-banner{ background-color: {AccentColor} }
+
+  .search {
+    background: {color:Nav Background};
+  }
+  
+  .search i {
+      color: {color:Nav Item Font Color}
+  }
+  
+  .search i:hover {
+      color: {AccentColor}
+  }
+  
+  .search input[type=text],
+  .mobile-search input[type=text] {
+      color: #666;
+  }
+  
+  .accent{ color: {AccentColor} }
+
+  .mobile-search {
+      background: {color:Nav Item Background Hover};
+  }
+  
+  body {
+      background-color: {BackgroundColor};
+      color: {color:Font Color};
+      font-family:{select:Body Font}
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+      font-family: {select:Headings Font};
+  }
+  
+  a:link,
+  a:visited {
+      color: {color:Links};
+  }
+  
+  a:active,
+  a:hover {
+      color: {color:Links Hover};
+  }
+  
+  table {
+      background: #DDD;
+      border-color: #BBB;
+  }
+  
+  table thead tr {
+      background: #999
+  }
+  
+  table thead tr th {
+      font-family: {select:Headings Font};
+      color: #FFF;
+  }
+  
+  table tbody tr {
+      background-color: #EEE
+  }
+  
+  table tbody tr:nth-child(2n) {
+      background-color: #DDD
+  }
+  
+  table tbody tr td {
+      color: #666;
+  }
+  
+  .app-top {
+      border-bottom-color: {AccentColor};
+  }
+  
+  :focus {
+      outline-color: {AccentColor}
+  }
+  
+  ::selection { color:{color:Font Color}; background: {AccentColor} }
+  ::-webkit-selection { color:{color:Font Color}; background: {AccentColor} }
+  ::-moz-selection { color:{color:Font Color}; background: {AccentColor} }
+  
+  img{ border: 1px solid {color:Nav Background}; }
+
+  header {
+      background-color: {color:Nav Background};
+      background-image: url({HeaderImage});
+  }
+  
+  header .header {
+      height: {text:Header Height}px
+  }
+  
+  header .header .header-logo {
+      width: 290px;
+      height: 100px;
+      background-image: url({image:Logo});
+      background-color: rgba({select:Logo Background});
+      top: {select:Logo Vertical Position};
+      float:{select:Logo Horizontal Position}
+  }
+  
+  {block:IfSidebarOnTheLeft}
+  main{ float:right !important }
+  {/block:IfSidebarOnTheLeft}
+
+  aside {
+      background: {color:Sidebar Background};
+      border-color: {color:Sidebar Border};
+      border-left: 2px solid {AccentColor};
+      color: {color:Sidebar Font Color}
+  }
+  
+  aside h1, aside h2, aside h3, aside h4, aside h5, aside h6 {
+      color: {color:Sidebar Headings Color}
+  }
+  
+  footer {
+      color: {color:Footer Font Color};
+      background: {color:Footer Background}
+  }
+  
+  footer h1, footer h2, footer h3, footer h4, footer h5, footer h6 {
+      color: {color:Footer Headings Color}
+  }
+  
+  footer .footer-copyright {
+      text-align: {select:Footer Base Text Align};
+      font-size: {select:Footer Base Font Size};
+      color: {color:Footer Base Font Color}
+  }
+  
+  .mobile-menu {
+      background: {color:Nav Background};
+      font-family: {select:Nav Font};
+      color: {color:Nav Item Font Color};
+  }
+  
+  .mobile-menu i {
+      color: {color:Nav Item Font Color};
+  }
+  
+  .mobile-menu i.active,
+  .mobile-menu i:active,
+  .mobile-menu i:focus,
+  .mobile-menu i:hover {
+      color: {AccentColor}
+  }
+  
+  nav,
+  .read_more_container {
+      background: {color:Nav Background};
+      color: {color:Nav Item Font Color};
+      font-family: {select:Nav Font}
+  }
+  
+  nav a:link,
+  nav a:visited {
+      color: {color:Nav Item Font Color};
+  }
+  
+  nav a:active,
+  nav a:hover {
+      color: {AccentColor};
+  }
+  
+  nav ul li:hover,
+  .read_more_container:hover {
+      background: {color:Nav Item Background Hover}
+  }
+  
+  nav ul li a:link,
+  nav ul li a:visited,
+  .read_more_container a:link,
+  .read_more_container a:visited{
+      color: {color:Nav Item Font Color};
+  }
+  
+  nav ul li a:active,
+  nav ul li a:hover,
+  .read_more_container a:active,
+  .read_more_container a:hover {
+      color: {color:Nav Item Font Hover}
+  }
+  
+  nav ul li ul li:hover {
+      background: {color:Nav Sub Item Background Hover};
+      color: {color:Nav Sub Item Font Hover};
+  }
+  
+  nav ul li ul li a {
+      color: {color:Nav Sub Item Font Color};
+  }
+  
+  nav ul li ul li a:hover {
+      color: {color:Nav Sub Item Font Hover}
+  }
+  
+  nav ul li ul li a:active {
+      color: {AccentColor}
+  }
+  
+  .navigation ul li ul li {
+      background: {color:Nav Sub Item Background};
+      // CHECK THIS \/
+      color: {color:Nav Sub Item Font Color};
+  }
+  
+  .navigation ul li ul li a {
+      color: {color:Nav Sub Item Font Color};
+  }
+  
+  .navigation ul li ul li a:active,
+  .navigation ul li ul li a:hover {
+      color: {color:Nav Sub Item Font Hover}
+  }
+  
+  .mobile-navigation {
+      background: {color:Nav Background};
+  }
+  
+  .mobile-navigation>ul>li {
+      border-bottom-color: {color:Nav Item Background Hover}
+  }
+  
+  .mobile-navigation>ul>li ul li i {
+      color: {AccentColor};
+  }
+  
+  .mobile-navigation>ul>li ul li i:before {
+      content: '\f054'
+  }
+  
+  .mobile-navigation>ul>li ul li:hover i {
+      color: {color:Nav Sub Item Background}
+  }
+
+  #twitter #tweets a .content{border-top-color:{color:Sidebar Border}}
+  
+  #twitter #tweets a:link,
+  #twitter #tweets a:visited{color:{color:Links Hover}}
+  #twitter #tweets a:active,
+  #twitter #tweets a:hover{color:{color:Links}}
+  
+  ol.notes{ border-bottom-color:{color:Sidebar Border} }
+  ol.notes li.note{ border-top-color:{color:Sidebar Border} }
+  ol.notes li.note blockquote{ border-color:{color:Sidebar Border} }
+
+  .post.index-page:hover{
+    border-left: 2px solid {AccentColor};
+    background-color:{color:Post Background Hover}
+  }
+
+  .post .meta.head, .post .meta.foot{
+    border-color: {color:Post Meta Separator};
+  }
+
+  .post blockquote{ border-left: 5px solid {color:Post Meta Separator}; }
+
+  .post .chat-label{ 
+    color:{AccentColor};
+    font-family:{select:Headings Font}
+  }
+
+  .post .plays{ 
+    background-color:{AccentColor};
+    color: {color:Nav Background}
+  }
+
+  .quote-wrapper .fa{ color: {AccentColor} }
+
+  .accent-color{ color: {AccentColor} }
+  
+  .modulare-audio .art{
+    border-color: {AccentColor};
+    background-color:{color:Nav Background}
+  }
+  
+
+  .modulare-audio .artist,
+  .modulare-audio .track,
+  .modulare-audio .album,
+  .modulare-audio .playcount{ 
+    background-color:{AccentColor};
+    color: {color:Nav Background}
+  }
+
+  .modulare-audio .artist .label,
+  .modulare-audio .track .label,
+  .modulare-audio .album .label,
+  .modulare-audio .playcount .label{ 
+    color: {color:Nav Item Color}
+  }
+
+  .pagination>li>a, .pagination>li>span{ color: {AccentColor} }
+  
+  .pagination>.active>a,
+  .pagination>.active>span,
+  .pagination>.active>a:hover,
+  .pagination>.active>span:hover,
+  .pagination>.active>a:focus,
+  .pagination>.active>span:focus{
+    color: {color:Nav Item Color};
+    background-color:{AccentColor};
+    border-color:{AccentColor}
+  }
+
+  .pagination>li>a:hover,
+  .pagination>li>span:hover,
+  .pagination>li>a:focus,
+  .pagination>li>span:focus{
+    color: {color:Nav Background};
+  }
+
+  @media (max-width: 768px) {
+
+      header {
+          border-bottom-color: {color:Nav Background}
+      }
+  
+      header .header {
+          height: 200px
+      }
+  
+  }
+
+  {CustomCSS}
+  

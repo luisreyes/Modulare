@@ -1,0 +1,20 @@
+|{block:Chat}
+
+//   ___ _         _    
+//  / __| |_  __ _| |_  
+// | (__| ' \/ _` |  _| 
+//  \___|_||_\__,_|\__| 
+
+|{block:Title}
+h2 {Title}
+|{/block:Title}
+|{block:Lines}
+
+div.chat-row
+  |{block:Label}
+  span.chat-label {Label}  
+  |{/block:Label}
+  span(class="chat-line {block:Label}labeled{/block:Label}") {Line}
+
+|{/block:Lines}
+|{/block:Chat}

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 15.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="290px" height="100px" viewBox="0 0 290 100" enable-background="new 0 0 290 100" xml:space="preserve">
+<filter  filterUnits="objectBoundingBox" id="AI_Shadow_1">
+	<feGaussianBlur  stdDeviation="1" in="SourceAlpha" result="blur"></feGaussianBlur>
+	<feOffset  dx="1" dy="1" in="blur" result="offsetBlurredAlpha"></feOffset>
+	<feMerge>
+		<feMergeNode  in="offsetBlurredAlpha"></feMergeNode>
+		<feMergeNode  in="SourceGraphic"></feMergeNode>
+	</feMerge>
+</filter>
+<g filter="url(#AI_Shadow_1)">
+	<path fill="#FFFFFF" d="M35.078,41.433L9.436,64.806l-3.713-0.08l29.382-26.711L35.078,41.433z M37.776,64.726h-2.671V38.014h2.671
+		V64.726z M67.132,41.433L37.776,64.726l0.054-3.152l29.329-23.559L67.132,41.433z M69.83,64.726h-2.671V38.014h2.671V64.726z"/>
+	<path fill="#FFFFFF" d="M72.501,38.014h2.671v26.711h-2.671V38.014z M75.172,38.014h29.382v2.671H75.172V38.014z M75.172,62.054
+		h26.711v2.672H75.172V62.054z M101.884,40.685h2.67v24.041h-2.67V40.685z"/>
+	<path fill="#FFFFFF" d="M107.226,38.014h2.671v24.04h-2.671V38.014z M107.226,62.054h29.383v2.672h-29.383V62.054z M109.897,38.014
+		h26.711v2.671h-26.711V38.014z M136.608,32.672h2.67v32.054h-2.67V32.672z"/>
+	<path fill="#FFFFFF" d="M141.95,38.014h2.671v26.711h-2.671V38.014z M144.622,62.054h29.382v2.672h-29.382V62.054z M171.333,38.014
+		h2.671v24.04h-2.671V38.014z"/>
+	<path fill="#FFFFFF" d="M176.676,32.672h2.671v32.054h-2.671V32.672z"/>
+	<path fill="#FFFFFF" d="M182.017,38.014h32.054v2.671h-32.054V38.014z M201.97,40.632l4.088,0.053l-21.369,16.027l-2.672-1.684
+		L201.97,40.632z M182.017,55.028l2.672,1.684v5.342h-2.672V55.028z M182.017,62.054h29.383v2.672h-29.383V62.054z M211.399,40.685
+		h2.671v24.041h-2.671V40.685z"/>
+	<path fill="#FFFFFF" d="M216.741,38.014h2.672v26.711h-2.672V38.014z M219.413,38.014h29.382v2.671h-29.382V38.014z"/>
+	<path fill="#FFFFFF" d="M254.138,62.054h-2.672v-24.04h2.672V62.054z M283.52,64.726h-32.054v-2.672h32.054V64.726z M283.52,40.685
+		h-29.382v-2.671h29.382V40.685z M263.566,62.107l-4.086-0.054l21.368-16.026l2.671,1.683L263.566,62.107z M283.52,47.71
+		l-2.671-1.683v-5.342h2.671V47.71z"/>
+</g>
+</svg>
