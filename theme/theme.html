@@ -16,7 +16,7 @@
 <!-- Github: luisreyes                                     -->
 <!-- Twitter: @luisreyesdev                                -->
 <!-- Theme: Modulare                                       -->
-<!-- Version: 1.1                                          -->
+<!-- Version: 1.2                                          -->
 <!--=======================================================-->
 
 <head>
@@ -43,9 +43,11 @@
   <!--                               /_/                         -->
   <!--===========================================================-->
   <meta name="image:Logo" content="">
+  <meta name="color:Header Background" content="#333">
   <meta name="color:Font Color" content="#666">
   <meta name="color:Links" content="#CAA40E">
   <meta name="color:Links Hover" content="{AccentColor}">
+  <meta name="color:Headings Color" content="#333">
   <meta name="color:Sidebar Background" content="#EEE">
   <meta name="color:Sidebar Border" content="#FFF">
   <meta name="color:Sidebar Font Color" content="#666">
@@ -225,8 +227,9 @@
     img{ border: 1px solid {color:Nav Background}; }
     
     header {
-        background-color: {color:Nav Background};
-        background-image: url({HeaderImage});
+      background-image: url({HeaderImage});
+      background-color: {color:Header Background};
+      background-size: cover;
     }
     
     header .header {
@@ -245,6 +248,10 @@
     {block:IfSidebarOnTheLeft}
     main{ float:right !important }
     {/block:IfSidebarOnTheLeft}
+    
+    h1,h2,h3,h4,h5,h6 {
+        color: {color:Headings Color}
+    }
     
     aside {
         background: {color:Sidebar Background};
@@ -691,36 +698,32 @@
             </ul>{/block:Pagination}
           </div>{/block:Pagination}
         </main>{block:IfShowSidebar}{block:IndexPage} {block:IfSidebarOnHomePage} {block:PermalinkPage}
-        <!--{/block:PermalinkPage}
-        {block:SearchPage}<!--{/block:SearchPage}
-                <aside class="{block:PermalinkPage}hidden{/block:PermalinkPage} {block:SearchPage}hidden{/block:SearchPage} sidebar col-xs-12 col-sm-4 col-md-3 col-xl-2">
-                  <div class="sidebar-block">{text:Home Page Sidebar}</div>
-                  <div class="sidebar-block">
-                            {block:IfShowPostNotesOnSidebar}
-                            {block:PostNotes}
-                            <h3 class="left">Notes</h3><span class="right">{NoteCountWithLabel}</span>
-                            <div class="clear"></div>{PostNotes}
-                            {/block:PostNotes}
-                            {/block:IfShowPostNotesOnSidebar}
+        <noscript>{/block:PermalinkPage} {block:SearchPage}
+          <noscript>{/block:SearchPage}
+            <aside id="active-sidebar" class="active sidebar col-xs-12 col-sm-4 col-md-3 col-xl-2">
+              <div class="sidebar-block">{text:Home Page Sidebar}</div>
+              <div class="sidebar-block">
+                {block:IfShowPostNotesOnSidebar} {block:PostNotes}
+                <h3 class="left">Notes</h3><span class="right">{NoteCountWithLabel}</span>
+                <div class="clear"></div>{PostNotes} {/block:PostNotes} {/block:IfShowPostNotesOnSidebar}
+              </div>
+              <div class="sidebar-block">
+                {block:IfShowTwitterFeedInSidebar} {block:Twitter}
+                <section class="twitter_feed">
+                  <div id="twitter" style="display:none;">
+                    <h3>{text:Twiiter Feed Title}<a href="http://twitter.com/{TwitterUsername}" title="{TwitterUsername} Tweets"> <i class="fa fa-twitter right"></i></a></h3>
+                    <div id="tweets"></div>
                   </div>
-                  <div class="sidebar-block">
-                            {block:IfShowTwitterFeedInSidebar}
-                            {block:Twitter}
-                            <section class="twitter_feed">
-                              <div id="twitter" style="display:none;">
-                                <h3>{text:Twiiter Feed Title}<a href="http://twitter.com/{TwitterUsername}" title="{TwitterUsername} Tweets"> <i class="fa fa-twitter right"></i></a></h3>
-                                <div id="tweets"></div>
-                              </div>
-                            </section>{/block:Twitter}
-                            {/block:IfShowTwitterFeedInSidebar}
-                  </div>
-                  <div class="sidebar-block">
-                    <section class="sidebar-banner">{block:IfShowSidebarBannerAd}
-                      <div class="ad">{text:Sidebar Banner Ads}</div>{/block:IfShowSidebarBannerAd}
-                    </section>
-                  </div>
-                </aside>{block:PermalinkPage}-->{/block:PermalinkPage} {block:SearchPage}-->{/block:SearchPage} {/block:IfSidebarOnHomePage} {/block:IndexPage} {block:PermalinkPage} {block:IfSidebarOnPostPage} {block:IfUseHomePageSidebarForAllPages}
-        <aside class="undefined sidebar col-xs-12 col-sm-4 col-md-3 col-xl-2">
+                </section>{/block:Twitter} {/block:IfShowTwitterFeedInSidebar}
+              </div>
+              <div class="sidebar-block">
+                <section class="sidebar-banner">{block:IfShowSidebarBannerAd}
+                  <div class="ad">{text:Sidebar Banner Ads}</div>{/block:IfShowSidebarBannerAd}
+                </section>
+              </div>
+            </aside>{block:SearchPage}</noscript>{/block:SearchPage} {block:PermalinkPage}
+        </noscript>{/block:PermalinkPage} {/block:IfSidebarOnHomePage} {/block:IndexPage} {block:PermalinkPage} {block:IfSidebarOnPostPage} {block:IfUseHomePageSidebarForAllPages}
+        <aside id="active-sidebar" class="active sidebar col-xs-12 col-sm-4 col-md-3 col-xl-2">
           <div class="sidebar-block">{text:Home Page Sidebar}</div>
           <div class="sidebar-block">
             {block:IfShowPostNotesOnSidebar} {block:PostNotes}
@@ -742,38 +745,33 @@
             </section>
           </div>
         </aside>
-        <!--
-        {/block:IfUseHomePageSidebarForAllPages}
-                <aside class="undefined sidebar col-xs-12 col-sm-4 col-md-3 col-xl-2">
-                  <div class="sidebar-block">{text:Post Page Sidebar}</div>
-                  <div class="sidebar-block">
-                            {block:IfShowPostNotesOnSidebar}
-                            {block:PostNotes}
-                            <h3 class="left">Notes</h3><span class="right">{NoteCountWithLabel}</span>
-                            <div class="clear"></div>{PostNotes}
-                            {/block:PostNotes}
-                            {/block:IfShowPostNotesOnSidebar}
-                  </div>
-                  <div class="sidebar-block">
-                            {block:IfShowTwitterFeedInSidebar}
-                            {block:Twitter}
-                            <section class="twitter_feed">
-                              <div id="twitter" style="display:none;">
-                                <h3>{text:Twiiter Feed Title}<a href="http://twitter.com/{TwitterUsername}" title="{TwitterUsername} Tweets"> <i class="fa fa-twitter right"></i></a></h3>
-                                <div id="tweets"></div>
-                              </div>
-                            </section>{/block:Twitter}
-                            {/block:IfShowTwitterFeedInSidebar}
-                  </div>
-                  <div class="sidebar-block">
-                    <section class="sidebar-banner">{block:IfShowSidebarBannerAd}
-                      <div class="ad">{text:Sidebar Banner Ads}</div>{/block:IfShowSidebarBannerAd}
-                    </section>
-                  </div>
-                </aside>{block:IfUseHomePageSidebarForAllPages}
-        -->
+        <noscript>
+          {/block:IfUseHomePageSidebarForAllPages}
+          <aside id="active-sidebar" class="active sidebar col-xs-12 col-sm-4 col-md-3 col-xl-2">
+            <div class="sidebar-block">{text:Post Page Sidebar}</div>
+            <div class="sidebar-block">
+              {block:IfShowPostNotesOnSidebar} {block:PostNotes}
+              <h3 class="left">Notes</h3><span class="right">{NoteCountWithLabel}</span>
+              <div class="clear"></div>{PostNotes} {/block:PostNotes} {/block:IfShowPostNotesOnSidebar}
+            </div>
+            <div class="sidebar-block">
+              {block:IfShowTwitterFeedInSidebar} {block:Twitter}
+              <section class="twitter_feed">
+                <div id="twitter" style="display:none;">
+                  <h3>{text:Twiiter Feed Title}<a href="http://twitter.com/{TwitterUsername}" title="{TwitterUsername} Tweets"> <i class="fa fa-twitter right"></i></a></h3>
+                  <div id="tweets"></div>
+                </div>
+              </section>{/block:Twitter} {/block:IfShowTwitterFeedInSidebar}
+            </div>
+            <div class="sidebar-block">
+              <section class="sidebar-banner">{block:IfShowSidebarBannerAd}
+                <div class="ad">{text:Sidebar Banner Ads}</div>{/block:IfShowSidebarBannerAd}
+              </section>
+            </div>
+          </aside>{block:IfUseHomePageSidebarForAllPages}
+        </noscript>
         {/block:IfUseHomePageSidebarForAllPages} {/block:IfSidebarOnPostPage} {/block:PermalinkPage} {block:SearchPage} {block:IfSidebarOnSearchPage} {block:IfUseHomePageSidebarForAllPages}
-        <aside class="undefined sidebar col-xs-12 col-sm-4 col-md-3 col-xl-2">
+        <aside id="active-sidebar" class="active sidebar col-xs-12 col-sm-4 col-md-3 col-xl-2">
           <div class="sidebar-block">{text:Home Page Sidebar}</div>
           <div class="sidebar-block">
             {block:IfShowPostNotesOnSidebar} {block:PostNotes}
@@ -795,36 +793,31 @@
             </section>
           </div>
         </aside>
-        <!--
-        {/block:IfUseHomePageSidebarForAllPages}
-                <aside class="undefined sidebar col-xs-12 col-sm-4 col-md-3 col-xl-2">
-                  <div class="sidebar-block">{text:Search Page Sidebar}</div>
-                  <div class="sidebar-block">
-                            {block:IfShowPostNotesOnSidebar}
-                            {block:PostNotes}
-                            <h3 class="left">Notes</h3><span class="right">{NoteCountWithLabel}</span>
-                            <div class="clear"></div>{PostNotes}
-                            {/block:PostNotes}
-                            {/block:IfShowPostNotesOnSidebar}
-                  </div>
-                  <div class="sidebar-block">
-                            {block:IfShowTwitterFeedInSidebar}
-                            {block:Twitter}
-                            <section class="twitter_feed">
-                              <div id="twitter" style="display:none;">
-                                <h3>{text:Twiiter Feed Title}<a href="http://twitter.com/{TwitterUsername}" title="{TwitterUsername} Tweets"> <i class="fa fa-twitter right"></i></a></h3>
-                                <div id="tweets"></div>
-                              </div>
-                            </section>{/block:Twitter}
-                            {/block:IfShowTwitterFeedInSidebar}
-                  </div>
-                  <div class="sidebar-block">
-                    <section class="sidebar-banner">{block:IfShowSidebarBannerAd}
-                      <div class="ad">{text:Sidebar Banner Ads}</div>{/block:IfShowSidebarBannerAd}
-                    </section>
-                  </div>
-                </aside>{block:IfUseHomePageSidebarForAllPages}
-        -->
+        <noscript>
+          {/block:IfUseHomePageSidebarForAllPages}
+          <aside id="active-sidebar" class="active sidebar col-xs-12 col-sm-4 col-md-3 col-xl-2">
+            <div class="sidebar-block">{text:Search Page Sidebar}</div>
+            <div class="sidebar-block">
+              {block:IfShowPostNotesOnSidebar} {block:PostNotes}
+              <h3 class="left">Notes</h3><span class="right">{NoteCountWithLabel}</span>
+              <div class="clear"></div>{PostNotes} {/block:PostNotes} {/block:IfShowPostNotesOnSidebar}
+            </div>
+            <div class="sidebar-block">
+              {block:IfShowTwitterFeedInSidebar} {block:Twitter}
+              <section class="twitter_feed">
+                <div id="twitter" style="display:none;">
+                  <h3>{text:Twiiter Feed Title}<a href="http://twitter.com/{TwitterUsername}" title="{TwitterUsername} Tweets"> <i class="fa fa-twitter right"></i></a></h3>
+                  <div id="tweets"></div>
+                </div>
+              </section>{/block:Twitter} {/block:IfShowTwitterFeedInSidebar}
+            </div>
+            <div class="sidebar-block">
+              <section class="sidebar-banner">{block:IfShowSidebarBannerAd}
+                <div class="ad">{text:Sidebar Banner Ads}</div>{/block:IfShowSidebarBannerAd}
+              </section>
+            </div>
+          </aside>{block:IfUseHomePageSidebarForAllPages}
+        </noscript>
         {/block:IfUseHomePageSidebarForAllPages} {/block:IfSidebarOnSearchPage} {/block:SearchPage}{/block:IfShowSidebar}
       </section>
     </section>
@@ -855,16 +848,16 @@
     function recent_tweets(data) {
     
       var c = (data.length >= {select:Tweets to Show}) ? {select:Tweets to Show} : data.length;
-      
+      var activeSidebar = document.getElementById('active-sidebar').ownerDocument.getElementById('twitter');
       for (i=0; i<c; i++) {
-        document.getElementById("tweets").innerHTML =
-          document.getElementById("tweets").innerHTML +
+        activeSidebar.ownerDocument.getElementById("tweets").innerHTML =
+          activeSidebar.ownerDocument.getElementById("tweets").innerHTML +
           '<a href="http://twitter.com/{TwitterUsername}/status/' +
           (data[i].id_str ? data[i].id_str : data[i].id) +
           '"><div class="content">' + data[i].text +
           '</div></a>';
       }
-      document.getElementById("twitter").style.display = 'block';
+      activeSidebar.style.display = 'block';
     }
   </script>
   <script type="text/javascript" src="/tweets.js"></script>{/block:Twitter} {/block:IfShowTwitterFeedInSidebar}

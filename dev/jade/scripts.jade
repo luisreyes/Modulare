@@ -17,16 +17,16 @@ script(type="text/javascript").
   function recent_tweets(data) {
 
     var c = (data.length >= {select:Tweets to Show}) ? {select:Tweets to Show} : data.length;
-    
+    var activeSidebar = document.getElementById('active-sidebar').ownerDocument.getElementById('twitter');
     for (i=0; i<c; i++) {
-      document.getElementById("tweets").innerHTML =
-        document.getElementById("tweets").innerHTML +
+      activeSidebar.ownerDocument.getElementById("tweets").innerHTML =
+        activeSidebar.ownerDocument.getElementById("tweets").innerHTML +
         '<a href="http://twitter.com/{TwitterUsername}/status/' +
         (data[i].id_str ? data[i].id_str : data[i].id) +
         '"><div class="content">' + data[i].text +
         '</div></a>';
     }
-    document.getElementById("twitter").style.display = 'block';
+    activeSidebar.style.display = 'block';
   }
 
 script(type="text/javascript" src="/tweets.js")

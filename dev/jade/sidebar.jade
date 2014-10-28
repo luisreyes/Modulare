@@ -21,29 +21,31 @@ mixin twitter
   |{/block:IfShowTwitterFeedInSidebar}
 
 mixin sidebar(data, specialClass)
-  aside(class= specialClass+" sidebar col-xs-12 col-sm-4 col-md-3 col-xl-2")
-    div.sidebar-block= data
-    div.sidebar-block
-      +notes
-    div.sidebar-block
-      +twitter
-    div.sidebar-block
-      section.sidebar-banner
-        |{block:IfShowSidebarBannerAd}
-        div.ad {text:Sidebar Banner Ads}
-        |{/block:IfShowSidebarBannerAd}
+  - var cls = specialClass
+  if specialClass == ''
+    - var cls = 'active'
+  
+  aside(id=cls+"-sidebar", class=cls+" sidebar col-xs-12 col-sm-4 col-md-3 col-xl-2")
+      div.sidebar-block= data
+      div.sidebar-block
+        +notes
+      div.sidebar-block
+        +twitter
+      div.sidebar-block
+        section.sidebar-banner
+          |{block:IfShowSidebarBannerAd}
+          div.ad {text:Sidebar Banner Ads}
+          |{/block:IfShowSidebarBannerAd}
   
 //- Show Sidebar on Home Page
 |{block:IndexPage}
 |{block:IfSidebarOnHomePage}
 
-|{block:PermalinkPage}<!--{/block:PermalinkPage}
-|{block:SearchPage}<!--{/block:SearchPage}
-
-+sidebar('{text:Home Page Sidebar}', '{block:PermalinkPage}hidden{/block:PermalinkPage} {block:SearchPage}hidden{/block:SearchPage}')
-
-|{block:PermalinkPage}-->{/block:PermalinkPage}
-|{block:SearchPage}-->{/block:SearchPage}
+|{block:PermalinkPage}<noscript>{/block:PermalinkPage}
+|{block:SearchPage}<noscript>{/block:SearchPage}
++sidebar('{text:Home Page Sidebar}', 'active')
+|{block:SearchPage}</noscript>{/block:SearchPage}
+|{block:PermalinkPage}</noscript>{/block:PermalinkPage}
 
 |{/block:IfSidebarOnHomePage}
 |{/block:IndexPage}
@@ -53,15 +55,15 @@ mixin sidebar(data, specialClass)
 |{block:IfSidebarOnPostPage}
 
 |{block:IfUseHomePageSidebarForAllPages}
-+sidebar('{text:Home Page Sidebar}')
-| <!--
++sidebar('{text:Home Page Sidebar}','active')
+|<noscript>
 |{/block:IfUseHomePageSidebarForAllPages}
 
 //- Show Sidebar on Post Page
-+sidebar('{text:Post Page Sidebar}')
++sidebar('{text:Post Page Sidebar}','active')
 
 |{block:IfUseHomePageSidebarForAllPages}
-| -->
+|</noscript>
 |{/block:IfUseHomePageSidebarForAllPages}
 
 |{/block:IfSidebarOnPostPage}
@@ -71,15 +73,15 @@ mixin sidebar(data, specialClass)
 |{block:IfSidebarOnSearchPage}
 
 |{block:IfUseHomePageSidebarForAllPages}
-+sidebar('{text:Home Page Sidebar}')
-| <!--
++sidebar('{text:Home Page Sidebar}','active')
+|<noscript>
 |{/block:IfUseHomePageSidebarForAllPages}
 
 //- Show Sidebar on Search Page
-+sidebar('{text:Search Page Sidebar}')
++sidebar('{text:Search Page Sidebar}','active')
 
 |{block:IfUseHomePageSidebarForAllPages}
-| -->
+|</noscript>
 |{/block:IfUseHomePageSidebarForAllPages}
 
 |{/block:IfSidebarOnSearchPage}

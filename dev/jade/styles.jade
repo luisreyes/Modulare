@@ -95,8 +95,9 @@ style.
   img{ border: 1px solid {color:Nav Background}; }
 
   header {
-      background-color: {color:Nav Background};
-      background-image: url({HeaderImage});
+    background-image: url({HeaderImage});
+    background-color: {color:Header Background};
+    background-size: cover;
   }
   
   header .header {
@@ -115,6 +116,10 @@ style.
   {block:IfSidebarOnTheLeft}
   main{ float:right !important }
   {/block:IfSidebarOnTheLeft}
+
+  h1,h2,h3,h4,h5,h6 {
+      color: {color:Headings Color}
+  }
 
   aside {
       background: {color:Sidebar Background};
